@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f8f8;
+  color: #333;
+}
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 10px;
+}
+.header {
+  text-align: left;
+  padding: 10px 0;
+}
+.balance-section {
+  background: #00c57a;
+  color: white;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 10px 0;
+}
+.balance-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+}
+.balance-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.add-money {
+  background: white;
+  color: #00c57a;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.transactions {
+  background: white;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px 0;
+}
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+.transaction:last-child {
+  border-bottom: none;
+}
+.transaction i {
+  font-size: 1.4em;
+  margin-right: 10px;
+}
+.transaction > div:first-child {
+  display: flex;
+  align-items: center;
+}
+.amount {
+  text-align: right;
+}
+.amount p {
+  margin: 0;
+  font-weight: bold;
+}
+.amount .success {
+  color: green;
+  font-size: 0.8em;
+}
+.amount .negative {
+  color: red;
+}
+.icon.orange {
+  color: orange;
+}
+.icon.green {
+  color: green;
+}
+
+.quick-actions {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  border-radius: 15px;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+.quick-actions button {
+  background: none;
+  border: none;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+}
+.quick-actions button i {
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: white;
+  border-radius: 15px;
+  padding: 10px 0;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.service {
+  padding: 10px 0;
+}
+.service i {
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+
+.promo {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.promo i {
+  font-size: 1.5em;
+  color: #00c57a;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ddd;
+  background: white;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 400px;
+}
+.footer-nav button {
+  background: none;
+  border: none;
+  text-align: center;
+  font-size: 0.8em;
+  color: #555;
+}
+.footer-nav .active {
+  color: #00c57a;
+}
+.footer-nav button i {
+  font-size: 1.2em;
+  display: block;
+}

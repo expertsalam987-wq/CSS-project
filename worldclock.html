@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nigeria & USA Live Clock</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+    .clock-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      width: 90%;
+      max-width: 900px;
+    }
+    .clock {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+    .clock:hover {
+      transform: scale(1.05);
+    }
+    .city {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .time {
+      font-size: 1.8rem;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🇳🇬 Nigeria & 🇺🇸 USA Live Time</h1>
+  <div class="clock-container">
+    <div class="clock" id="nigeria"><div class="city">🇳🇬 Nigeria (WAT)</div><div class="time"></div></div>
+    <div class="clock" id="newyork"><div class="city">🇺🇸 New York (ET)</div><div class="time"></div></div>
+    <div class="clock" id="chicago"><div class="city">🇺🇸 Chicago (CT)</div><div class="time"></div></div>
+    <div class="clock" id="denver"><div class="city">🇺🇸 Denver (MT)</div><div class="time"></div></div>
+    <div class="clock" id="losangeles"><div class="city">🇺🇸 Los Angeles (PT)</div><div class="time"></div></div>
+  </div>
+
+  <script>
+    function updateTime() {
+      const zones = {
+        nigeria: 'Africa/Lagos',
+        newyork: 'America/New_York',
+        chicago: 'America/Chicago',
+        denver: 'America/Denver',
+        losangeles: 'America/Los_Angeles'
+      };
+
+      for (const [id, zone] of Object.entries(zones)) {
+        const now = new Date().toLocaleString('en-US', { timeZone: zone, hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+        document.querySelector(`#${id} .time`).textContent = now;
+      }
+    }
+
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+</html>

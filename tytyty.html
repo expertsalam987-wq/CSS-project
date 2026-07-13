@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizontal Scroll with Arrows</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .scroll-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .scroll-content {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none; /* Firefox */
+    }
+
+    .scroll-content::-webkit-scrollbar {
+      display: none; /* Chrome, Safari */
+    }
+
+    .item {
+      min-width: 200px;
+      height: 120px;
+      background: #4CAF50;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      font-size: 1.2rem;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    .arrow.left {
+      left: 10px;
+    }
+
+    .arrow.right {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Horizontal Scroll Section with Arrows</h2>
+  
+  <div class="scroll-container">
+    <button class="arrow left" onclick="scrollLeft()">&#10094;</button>
+    <div class="scroll-content" id="scroll-content">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+      <div class="item">Item 6</div>
+      <div class="item">Item 7</div>
+      <div class="item">Item 8</div>
+      <div class="item">Item 9</div>
+      <div class="item">Item 10</div>
+    </div>
+    <button class="arrow right" onclick="scrollRight()">&#10095;</button>
+  </div>
+
+  <script>
+    const scrollContainer = document.getElementById('scroll-content');
+
+    function scrollLeft() {
+      scrollContainer.scrollBy({ left: -200, behavior: 'smooth' });
+    }
+
+    function scrollRight() {
+      scrollContainer.scrollBy({ left: 200, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

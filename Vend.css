@@ -1,0 +1,432 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    /* font-family: Arial, sans-serif; */
+    /* height: 100%; */
+}
+header{
+    /* margin: 10px 30px; */
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    /* min-width: 10vh; */
+
+}
+nav a{
+    padding-right: 50px;
+}
+nav{
+    display: flex;
+    gap: 15px;
+}
+nav .w-next svg{
+    margin: 50px;
+}
+#false{
+    display: flex;
+    gap: 50px;
+    background-color: #e5e5ea;
+    padding: 15px;
+    border-radius: 20px;
+    color: #1b1b1f;
+    width: 85cap;
+    height: 50%;
+    margin-right: 50px;
+}
+#false li{
+    display: none;
+}
+#false ul{
+    display: flex;
+    font-size: 20px;
+    gap: 30px;
+    cursor: pointer;
+}
+.search input{
+    border-radius: 5px;
+    border: none;
+}
+.search input:hover{
+    background-color: #e5e5ea;
+    padding: 10px;
+    height: 100%;
+    width: 60px;
+}
+.search input:active{
+    border: #e5e5ea;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* text-align: center; */
+    align-items: center;
+    margin-top: 100px;
+}
+section h1{
+    font-size: 100px;
+    color: #7a2822;
+    font-family: Arial, sans-serif;
+}
+section p{
+    font-size: 29px;
+    font-family: Arial, sans-serif;
+}
+section button{
+    /* width: 10cap; */
+    /* text-align: center; */
+    /* background-color: rgb(255, 1, 1); */
+    color: aliceblue;
+    border-radius: 40px;
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 15px;
+
+}
+.button-container{
+    display: flex;
+    gap: 20px;
+}
+#startButton{
+    background-color: #1b1b1f;
+    color: #ffffff;
+    /* border: none; */
+}
+#startButton:hover{
+    background-color: #777777;
+    color: #ffffff;
+}
+#impactButton{
+    background-color: #ffffff;
+    color: #1b1b1f;
+}
+#impactButton:hover{
+    background-color: #e9e7e7;
+}
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+#video{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  /* height: 100%;
+  width: 1000px; */
+  /* display: none; */
+}
+#allAbout{
+    display: flex;
+    gap: 65px;
+    margin: 30px;
+}
+section #allAbout a #aboutUs h1{
+    font-size: 34px;
+    color: #ffffff;
+    padding-bottom: 20px;
+}
+section #allAbout a #aboutUs p{
+    color: #ffffff;
+    font-size: 24px;
+    padding-bottom: 50px;
+}
+section #allAbout a #connectUs p{
+    color: #1b1b1f;
+    font-size: 23px;
+    padding-bottom: 50px;
+}
+a #aboutUs{
+    /* position: relative; */
+    padding: 30px 20px;
+    background-color: #7a2822;
+    width: 99%;
+    height: 150%;
+}
+a #aboutUs:hover{
+    border-radius: 20px;
+}
+a #connectUs{
+    /* position: relative; */
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0;
+    background-color: #adddff;
+    width: 90%;
+    height: 155%;
+}
+a #connectUs:hover{
+    border-radius: 20px;
+}
+section #allAbout a #connectUs h1{
+    font-size: 34px;
+    color: #1b1b1f;
+    padding-bottom: 20px;
+}
+a .w-full{
+    /* position: absolute; */
+    height: 82.8%;
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+a .w-fill{
+    /* position: absolute; */
+    height: 83.2%;
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+a{
+    text-decoration: none;
+}
+#going h1{
+    color: #1b1b1f;
+    padding-top: 29%;
+    margin: 30px;
+    font-size: 50px;
+}
+#allInterim{
+    display: flex;
+    gap: 30px;
+    margin: 30px;
+}
+#report{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #dbdbdb;
+    padding: 25px;
+    width: 120%;
+
+}
+#report:hover{
+    border-radius: 30px;
+}
+#report h3{
+    font-size: 29px;
+}
+#report p{
+    font-size: 22px;
+}
+#report img{
+    flex: 6;
+    height: 500px;
+    width: 650px;
+    border-radius: 30px;
+}
+#allTo{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#allHires{
+    display: flex;
+    gap: 30px;
+}
+#allHires #top{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #dbdbdb;
+    padding: 25px;
+    width: 40%;
+    padding-bottom: 90px;
+}
+#allHires #sell{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #dbdbdb;
+    padding: 25px;
+    width: 40%;
+    padding-bottom: 90px;
+}
+#allHires #sell:hover, #allHires #top:hover{
+    border-radius: 30px;
+}
+
+#allHires #top h3, #allHires #sell h3{
+    font-size: 29px;
+}
+#allHires #top p, #allHires #sell p{
+    font-size: 22px;
+}
+#allTo #catch{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #dbdbdb;
+    padding: 25px;
+    /* width: 40%; */
+    padding-bottom: 90px;
+    border-radius: 30px;
+}
+#allTo #catch p{
+    font-size: 22px;
+}
+#allTo #catch #news{
+    padding-top: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#allTo #catch #news p{
+    font-size: 22px;
+}
+#Explore{
+    background-color: #adddff;
+    gap: 20px;
+    padding-top: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#embem{
+    display: flex;
+    padding-bottom: 80px;
+}
+#Explore #develop{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 6
+}
+#Explore #develop h1{
+    font-size: 35px;
+}
+#Explore #develop p{
+    font-size: 22px;
+}
+#Explore #develop button{
+    background-color: #1b1b1f;
+    color: #ffffff;
+    border-radius: 30px;
+    border: none;
+    height: 50px;
+    width: 180px;
+}
+#Explore #Mobility{
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+    gap: 30px;
+    margin: 20px;
+}
+#Explore #Mobility #Estate{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#Explore #Mobility #Estate h1{
+    font-size: 25px;
+}
+#Explore #Mobility #Estate p{
+    font-size: 18px;
+}
+#every{
+    display: flex;
+    margin: 80px 30px 80px 30px;
+}
+#every img{
+    flex: 6;
+    height: 500px;
+    width: 700px;
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px;
+}
+#every #day{
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+    gap: 15px;
+}
+#every #day h1, #Career #impact h1{
+    font-size: 35px;
+}
+#every #day p, #Career #impact p{
+    font-size: 23px;
+}
+#every #day button, #Career #impact button{
+    background-color: #1b1b1f;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    height: 45px;
+    width: 100px;
+}
+#Career{
+    display: flex;
+    gap: 50px;
+    margin: 80px 30px 80px 30px;
+}
+#Career #impact{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 6;
+}
+#Career img{
+    flex: 6;
+    height: 500px;
+    width: 500px;
+    border-radius: 30px;
+}
+footer{
+    padding: 50px 30px 0 30px;
+    background-color: #7a2822;
+    color: #ffffff;
+}
+footer #Market .Vend{
+    height: 50px;
+    width: 50px;
+}
+footer #Market{
+    display: flex;
+    flex: 6;
+    flex-direction: column;
+    gap: 15px;
+}
+footer #Market 
+footer #download{
+    display: flex;
+}
+footer ul{
+    display: inline;
+    list-style-type: none;
+    gap: 20px;
+}
+footer .flex{
+    flex: 6;
+}
+footer .flex ul li, footer .flex .data-textid ul li{
+    display: inline;
+    gap: 30px;
+}
+footer .flex ul li:hover, footer .flex .data-textid ul li{
+    text-decoration: underline;
+}
+footer .flex .data-textid ul li button{
+    background-color: none;
+    color: #ffffff;
+}
+footer .flex ul li a{
+    color: #ffffff;
+}
+footer .gap-16 .text-current{
+    color: #ffffff;
+}
+.footer-video{
+    padding-top: 80px;
+    background-color: #7a2822;
+}
+.text-\[--vend-footer-illustration-color\] {
+  color: #4c0702;
+}

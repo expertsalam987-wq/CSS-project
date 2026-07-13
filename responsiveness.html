@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+@media(max-width:960px){
+    button{display: block !important;
+           
+    }
+nav{
+    display: none !important;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+}
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 100%; */
+}
+nav{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+button{
+    display: none;
+}
+
+</style> 
+<body>
+    <header>
+        <div class="logo">
+            <h1>logo</h1>
+        </div>
+        <nav>
+            <a href="">home</a>
+            <a href="">about</a>
+            <a href="">contact</a>
+        </nav>
+          <button>menu</button>
+        
+    </header>   
+    
+
+</body>
+
+</html>
