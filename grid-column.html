@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Column</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border-collapse: collapse;
+        }
+        p{
+            border: 1px solid black;
+            text-align: center;
+        }
+   
+    </style>
+</head>
+<body>
+    <section>
+            <p style="grid-row: 1/ span 2;">1</p>
+            <p style="grid-row: 1/ span 2;">2</p>
+            <p style="grid-row: 2/ span 1;">3</p>
+            <p style="grid-row: 2/ span 1;">4</p>
+            <p style="grid-row: 2/ span 1;">5</p>
+            <p style="grid-column: 1/ span 2;">6</p>
+    </section>
+</body>
+</html>

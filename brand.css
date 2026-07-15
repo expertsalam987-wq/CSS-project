@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body{
+    background-color: rgb(rgb(218, 187, 187), rgb(158, 158, 158), rgb(209, 209, 221));
+    /* color: #f5f5f5; */
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    height: 100%;
+}
+header{
+    display: flex;
+    gap: 800px;
+    margin: 30px;
+    padding: 10px;
+}
+.logo{
+    display: flex;
+}
+.nav{
+    display: flex;
+    gap: 40px;
+}
+.nav ul{
+    list-style-type: none;
+}
+.nav ul li{
+    display: inline;
+    gap: 20px;
+}
+.nav ul li .shop{
+    color: orange;
+}
+.nav ul li a{
+    color: slategray;
+}

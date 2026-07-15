@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GIGSTECH Appointment Form</title>
+  <link rel="stylesheet" href="appointment.css">
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to GIGSTECH Solution and Consult</h1>
+    <p>Book your appointment with us easily and quickly</p>
+  </header>
+
+  <!-- Appointment Form (Q1) -->
+  <form id="appointmentForm">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName">
+    <span class="error" id="nameError">Full Name is required</span>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email">
+    <span class="error" id="emailError">Valid Email is required</span>
+
+    <label for="date">Date of Appointment:</label>
+    <input type="date" id="date" name="date">
+    <span class="error" id="dateError">Date is required</span>
+
+    <label for="service">Type of Service:</label>
+    <select id="service" name="service">
+      <option value="">Select Service</option>
+      <option>Consultation</option>
+      <option>Technical Support</option>
+      <option>Web Development</option>
+    </select>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+    <button type="submit">Submit</button>
+    <p class="success" id="successMsg"></p>
+  </form>
+
+<script src="appointment.js"></script>
+</body>
+</html> 

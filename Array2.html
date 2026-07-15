@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <input type="number" id="bgchanger">
+
+</body>
+  <script>
+      const pbody = document.querySelector("body");
+      const bgchanger = document.querySelector("#bgchanger");
+
+      bgchanger.addEventListener("input",function(){
+        var colorID = this.value;
+        
+        var colors = ["blue", "red", "green", "brown", "gold", "yellow", "orange", "black", "silver", "purple", "violent", "white", "indigo","lemon",];
+        
+        pbody.style.backgroundColor = colors[colorID];
+      })
+  </script>
+</html>

@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MySchools — Learn Web Dev</title>
+  <meta name="description" content="Learn web development — tutorials, references and examples." />
+
+  <!-- Basic styles (clean, W3Schools-like palette) -->
+  <style>
+    :root{
+      --accent:#04AA6D; /* w3schools-ish green */
+      --accent-2:#037f57;
+      --bg:#f7f9fb;
+      --panel:#ffffff;
+      --muted:#6b7280;
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:#111827;
+      background:var(--bg);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* Header */
+    header{
+      background:linear-gradient(0deg, rgba(0,0,0,0.02), rgba(0,0,0,0));
+      border-bottom:1px solid rgba(0,0,0,0.05);
+      position:sticky;
+      top:0;
+      z-index:50;
+    }
+    .container{
+      max-width:var(--max-width);
+      margin:0 auto;
+      padding:12px 16px;
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .logo{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      text-decoration:none;
+      color:inherit;
+    }
+    .logo .mark{
+      width:46px;
+      height:36px;
+      display:inline-grid;
+      place-items:center;
+      font-weight:700;
+      color:white;
+      background:var(--accent);
+      border-radius:6px;
+      font-size:18px;
+    }
+    .logo .title{
+      font-weight:700;
+      font-size:18px;
+      letter-spacing:0.2px;
+    }
+
+    /* Search */
+    .search {
+      margin-left:auto;
+      display:flex;
+      gap:8px;
+      align-items:center;
+    }
+    .search input{
+      width:320px;
+      max-width:40vw;
+      padding:8px 12px;
+      border-radius:6px;
+      border:1px solid rgba(0,0,0,0.08);
+      background:white;
+      outline:none;
+    }
+    .search button{
+      background:var(--accent);
+      color:white;
+      border:none;
+      padding:8px 12px;
+      border-radius:6px;
+      cursor:pointer;
+    }
+
+    /* Layout */
+    .layout{
+      max-width:var(--max-width);
+      margin:20px auto;
+      display:grid;
+      grid-template-columns:240px 1fr;
+      gap:20px;
+      padding:0 16px 60px 16px;
+    }
+
+    /* Sidebar */
+    aside{
+      background:var(--panel);
+      border-radius:8px;
+      border:1px solid rgba(0,0,0,0.04);
+      padding:14px;
+      height:fit-content;
+    }
+    .section-title{
+      font-size:13px;
+      color:var(--muted);
+      margin:4px 0 10px 0;
+      font-weight:600;
+    }
+    .nav-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}
+    .nav-list a{
+      display:block;
+      padding:8px 10px;
+      border-radius:6px;
+      text-decoration:none;
+      color:#0f172a;
+      font-weight:600;
+      font-size:14px;
+    }
+    .nav-list a:hover{background:rgba(4,170,109,0.06)}
+
+    /* Main content */
+    main{
+      min-height:400px;
+    }
+    .hero{
+      background:linear-gradient(90deg, rgba(4,170,109,0.06), rgba(3,127,87,0.02));
+      border-radius:10px;
+      padding:18px;
+      margin-bottom:18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .hero h1{margin:0;font-size:20px}
+    .hero p{margin:0;color:var(--muted)}
+
+    /* Cards grid */
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+      gap:12px;
+    }
+    .card{
+      background:var(--panel);
+      padding:12px;
+      border-radius:8px;
+      border:1px solid rgba(0,0,0,0.04);
+    }
+    .card h3{margin:0 0 6px 0;font-size:15px;}
+    .card p{margin:0;color:var(--muted);font-size:13px}
+
+    /* Footer */
+    footer{
+      max-width:var(--max-width);
+      margin:20px auto 60px auto;
+      padding:10px 16px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* Responsive */
+    @media (max-width:880px){
+      .layout{grid-template-columns:1fr; padding:0 12px;}
+      aside{order:2}
+      main{order:1}
+      .search input{width:180px}
+      .logo .title{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" role="banner">
+      <a class="logo" href="#" aria-label="MySchools Home">
+        <span class="mark">MS</span>
+        <span class="title">MySchools</span>
+      </a>
+
+      <nav class="search" role="search" aria-label="Site search">
+        <input id="globalSearch" type="search" placeholder="Search tutorials, references, examples..." aria-label="Search tutorials">
+        <button id="searchBtn" aria-label="Search">Search</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside aria-label="Tutorial categories">
+      <div class="section-title">Tutorials</div>
+      <ul class="nav-list" id="categoryList">
+        <li><a href="#" data-cat="all">All</a></li>
+        <li><a href="#" data-cat="html">HTML</a></li>
+        <li><a href="#" data-cat="css">CSS</a></li>
+        <li><a href="#" data-cat="js">JavaScript</a></li>
+        <li><a href="#" data-cat="python">Python</a></li>
+        <li><a href="#" data-cat="sql">SQL</a></li>
+        <li><a href="#" data-cat="react">React</a></li>
+      </ul>
+
+      <div style="height:12px"></div>
+      <div class="section-title">Resources</div>
+      <ul class="nav-list">
+        <li><a href="#">References</a></li>
+        <li><a href="#">Examples</a></li>
+        <li><a href="#">Try it Online</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main -->
+    <main>
+      <section class="hero" aria-labelledby="heroHeading">
+        <div>
+          <h1 id="heroHeading">Learn to code — for free</h1>
+          <p>Clear step-by-step tutorials, references, and examples.</p>
+        </div>
+        <div style="text-align:right">
+          <small style="color:var(--muted)">Start with a tutorial</small>
+        </div>
+      </section>
+
+      <section aria-live="polite">
+        <div class="section-title">Popular tutorials</div>
+
+        <!-- Cards container (populated in JS) -->
+        <div class="cards" id="cardsContainer" role="list">
+          <!-- Example card (JS will render many) -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div style="font-size:13px;color:var(--muted)">© <span id="year"></span> MySchools — Tutorials and references</div>
+    </div>
+  </footer>
+
+  <!-- Minimal JS: sample data + search/filter behavior -->
+  <script>
+    // Sample tutorials dataset (replace with your real content)
+    const tutorials = [
+      {id:1, title:"HTML Tutorial", desc:"Learn HTML basics: tags, elements, attributes.", cat:"html"},
+      {id:2, title:"CSS Tutorial", desc:"Style your website with CSS: selectors, layout, flexbox.", cat:"css"},
+      {id:3, title:"JavaScript Tutorial", desc:"Make web pages interactive with JavaScript.", cat:"js"},
+      {id:4, title:"Python for Beginners", desc:"Intro to Python programming and syntax.", cat:"python"},
+      {id:5, title:"SQL Basics", desc:"Learn how to query databases using SQL.", cat:"sql"},
+      {id:6, title:"React Guide", desc:"Build fast user interfaces with React.", cat:"react"},
+      {id:7, title:"CSS Grid Layout", desc:"Powerful two-dimensional layout system.", cat:"css"},
+      {id:8, title:"DOM Manipulation", desc:"Change HTML/CSS via JavaScript.", cat:"js"},
+    ];
+
+    // render cards
+    const cardsContainer = document.getElementById('cardsContainer');
+    function render(list){
+      cardsContainer.innerHTML = '';
+      if(list.length === 0){
+        cardsContainer.innerHTML = '<div style="color:var(--muted)">No tutorials found.</div>';
+        return;
+      }
+      list.forEach(t=>{
+        const card = document.createElement('article');
+        card.className='card';
+        card.setAttribute('role','listitem');
+        card.innerHTML = `<h3>${t.title}</h3><p>${t.desc}</p>`;
+        cardsContainer.appendChild(card);
+      });
+    }
+
+    // initial render
+    render(tutorials);
+
+    // search/filter
+    const searchInput = document.getElementById('globalSearch');
+    const searchBtn = document.getElementById('searchBtn');
+    function filterAndRender(){
+      const q = searchInput.value.trim().toLowerCase();
+      const filtered = tutorials.filter(t=>{
+        return (q === '' || t.title.toLowerCase().includes(q) || t.desc.toLowerCase().includes(q));
+      });
+      render(filtered);
+    }
+    searchInput.addEventListener('input', filterAndRender);
+    searchBtn.addEventListener('click', filterAndRender);
+
+    // category nav
+    document.getElementById('categoryList').addEventListener('click', (e)=>{
+      const a = e.target.closest('a');
+      if(!a) return;
+      e.preventDefault();
+      const cat = a.dataset.cat;
+      if(cat === 'all'){
+        render(tutorials);
+      } else {
+        render(tutorials.filter(t => t.cat === cat));
+      }
+    });
+
+    // set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

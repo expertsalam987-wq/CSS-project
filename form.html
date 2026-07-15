@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<title>form</title>
+<style>
+form{
+    float:center;
+    border-top: none;
+    margin: 30px;
+    padding: 50px;
+    justify-content: space-between;
+    
+    }
+.room{
+    display: flex;
+    flex-direction: column;
+    
+}
+.ram{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+input{
+    /* weight: 20px; */
+    height: 10px;
+    width: 190px;
+}
+.was{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+button{
+    background-color: blue;
+    width: 100px;
+    color: gray;
+    margin-left: 400px;
+}
+
+
+</style>
+</head>
+<body>
+<form>
+    <div class="room">
+        <div class="ram">
+<input type="text" placeholder="firstname">
+<input type="text" placeholder="last name">
+        </div>
+        <div>
+<input type="email" placeholder="email">
+        </div>
+         <div class="was">
+<input type="country" placeholder="country">
+<input type="state" placeholder="state">
+         </div>
+<button>submit</button>
+    </div>
+</form>
+</body>
+</html>

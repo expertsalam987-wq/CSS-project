@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixed Nav Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      width: 100%;
+      background: #007bff;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    header.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    section {
+      height: 100vh;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header id="mainHeader">
+    <nav>
+      <a href="#section1">Section 1</a>
+      <a href="#section2">Section 2</a>
+      <a href="#section3">Section 3</a>
+    </nav>
+  </header>
+
+  <section id="section1" style="background:#f4f4f4;">Section 1</section>
+  <section id="section2" style="background:#ddd;">Section 2</section>
+  <section id="section3" style="background:#bbb;">Section 3</section>
+
+  <script>
+    const header = document.getElementById("mainHeader");
+    const navLinks = document.querySelectorAll("nav a");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        header.classList.add("fixed"); // make header fixed after clicking
+      });
+    });
+  </script>
+</body>
+</html>

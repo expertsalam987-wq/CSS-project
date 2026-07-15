@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>eventlisteners</title>
+    <style>
+        #content{
+            display : none;
+        }
+    </style>
+</head>
+<body>
+ <p id="content">Show My Content</p>
+ <button id="btn">Show</button>
+    <script>
+  const content = document.getElementById("content");
+  const btn = document.getElementById("btn");
+  btn.addEventListener("click",function(){
+    if (content.style.display === "block"){
+        content.style.display = "none";
+        btn.textContent = "show";
+    }
+    else {
+        content.style.display = "block";
+        btn.textContent = "hide";
+    }
+  });   
+    </script>
+</body>
+</html>

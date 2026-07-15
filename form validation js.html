@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Form validation</title>
+    <style>
+        #errorMessage{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p id="errorMessage">Incorrect password</p>
+    <form id="form action">
+      <input type="password" id="Newpassword"><br>
+      <input type="password" id="Confirmpassword"><br>
+      <button type="button" disabled id="Submit">Submit</button>
+    </form>
+    <script>
+//         const Newpassword = document.getElementById("Newpassword");
+//         const Confirmpassword = document.getElementById("Confirmpassword");
+//         const Submit = document.getElementById("Submit");
+
+//         Confirmpassword.addEventlistener("input",function(){
+//           if(Confirmpassword.value === Newpassword){
+//            submit.disabled = false;
+//     }
+//       errorMessage.innerHTML = "passwordmatch";
+//           else(
+//            submit.disabled = true);
+// })
+   const Newpassword = document.getElementById("Newpassword");
+   const Confirmpassword = document.getElementById("Confirmpassword");
+   const Submit = document.getElementById("Submit");
+   const errorMessage = document.getElementById("errorMessage");
+
+   Confirmpassword.addEventListener("input", function() {
+       if (Confirmpassword.value === Newpassword.value) {
+           Submit.disabled = false;
+           errorMessage.style.display = "none";
+       } else {
+           Submit.disabled = true;
+           errorMessage.style.display = "block";
+       }
+   });
+    </script>
+</body>
+</html>

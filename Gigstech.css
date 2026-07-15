@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-color: gold;
+    color: aliceblue;
+    /* width: 100%; */
+    height: 100%;
+    padding: 50px;
+}
+body{
+    background: url(image/me.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+header a{
+    display: inline;
+    margin-left: 200px;
+    text-decoration: none;
+    text-justify: center;
+    background-color: #eb0b0b;
+    color: black;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(253, 8, 8, 0.5);
+    background: linear-gradient(to right, rgb(0, 255, 213), rgb(0, 255, 21));
+}
+header a:hover{
+    background-color: olive;
+    background: linear-gradient(to right, rgb(250, 250, 62), gold, yellow, orange) !important;
+    border-radius: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-items: center;
+    background-color: blueviolet;
+    border-radius: 30px;
+    margin: 100px;
+    margin-left: 480px;
+    padding: 50px;
+    height: 100%;
+    width: 20%;
+    box-shadow: 0px 4px 6px rgba(253, 8, 8, 0.5);
+    background-image: url(image/me.jpg);
+    background-repeat: no-repeat;
+    background-size: 160%;
+
+}
+form input{
+    background-color: rgba(0, 255, 255, 0.137);
+    border-radius: 10px;
+    color: aliceblue;
+    padding: 5px;
+    border: 1px solid whitesmoke;
+    box-shadow: 0px 4px 6px rgba(253, 8, 8, 0.5);
+
+}
+form input:hover{
+    border: none;
+}
+form input::placeholder{
+    font-size: 10px;
+    text-transform: capitalize;
+}
+form #full_label{
+    font-size: 15px;
+    color: rgb(248, 245, 245);
+}
+form label select{
+    box-shadow: 0px 4px 6px rgba(253, 8, 8, 0.5);
+    background-color: rgba(0, 255, 255, 0.137);
+    color: aliceblue;
+    gap: 10px;
+    border: 1px solid whitesmoke;
+}
+form label select option{
+    background-color: rgb(28, 2, 54);
+    color: #f7eded;
+}
+form label textarea{
+    border:  1px solid whitesmoke;
+    background-color: rgba(0, 255, 255, 0.137);
+    color: aliceblue;
+    box-shadow: 0px 4px 6px rgba(253, 8, 8, 0.5);
+}
+form button{
+    /* background-color: gold; */
+    width: 80px;
+    padding: 8px;
+    border-radius: 30px;
+    color: aliceblue;
+    margin-left: 100px;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(253, 8, 8, 0.5);
+    background: linear-gradient(to left, orange, purple, gold) !important;
+    cursor: pointer;
+}
+form button:hover{
+    background: linear-gradient( to right,gold, rgba(0, 68, 68, 0.137), orange) !important;
+}
+.error {
+      color: #f1231c;
+      font-size: 14px;
+      margin-top: -10px;
+      display: none;
+}
+.success {
+      color: #28a745;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 10px;
+      display: none;
+}
+/* form button:visited{
+    background-color: blue;
+} */
+

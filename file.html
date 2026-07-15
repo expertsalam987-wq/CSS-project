@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kolomo.css">
+    <title>kolomoni website</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+header{
+    justify-content: space-between;
+    position: sticky;
+    top:0;
+    background-color: transparent;
+    color: #FAFAF9;
+}
+body{
+    font-size: 1.6rem;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #FAFAF9;
+  position: relative;
+  overflow-x: hidden;
+  height: 100%;
+}
+.kolo-colored{
+    display: flex;
+    color: #211f1e;
+    font-size: 15px;
+    gap: 15px;
+    align-items: center;
+}
+
+.kolo-colored:hover{
+    color: #ff8e05;
+}
+.container .scroll{
+    background-color: #001E89;
+    position: sticky;
+    transition: all 0.4s ease-in-out;
+
+    
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    color: orangered;
+    position: fixed;
+    padding: 20px 80px 20px 80px;
+    width: 90%;
+}
+.container img{
+    height: 40px;
+    width: 40px;
+}
+.navbar-collapse{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    
+}
+.navbar-collapse a{
+    font-size: 13px;
+    font-weight: 100;
+    color: #211f1e;
+}
+.navbar-collapse a:hover{
+    color: #FF7A00;
+    transition: 400ms ease-in-out;
+}
+button img{
+    display: block;
+}
+@media(max-width:767px){
+    a img{
+        display: block;
+    }
+    .navbar-collapse{
+        display: none;
+        flex-direction: column;
+    gap: 17px;
+    height: 100vh;
+    /* right: 0; */
+    align-items: flex-start;
+    background-color: #090338;
+    position: absolute;
+    top: 55px;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        padding-left: 50px;
+        padding-right: 50px;
+        position: static;
+        /* background-color: blue; */
+    }
+    .her{
+        display: block;
+    }
+    .money{
+        flex-direction: column;
+        gap: unset;
+        align-items: center;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .hour h1{
+        font-size:30px;
+        font-weight: bold;
+    }
+    .down{
+        padding-right: 10rem;
+        padding-left: 20rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 30vh;
+        height: 30vh;
+    }
+    .down img{
+        width: 50vh;
+        height: 50vh;
+    }
+    .was{
+        display: flex;
+
+    }
+}
+@media (max-width:360px) {
+    
+}
+.her{
+    display: none;
+}
+.navbar-collapse button{
+    border-radius: 20px 20px 0 20px;
+    color: #ff8e05;
+    height: 100%;
+    width: 80px;
+    background: none;
+    border: 2px solid #FF7A00;
+    border-width: 2px;
+}
+.navbar-collapse button:hover{
+    background-color: #FF7A00;
+    color: #FAFAF9;
+}
+.money{
+    display: flex;
+    align-items: normal;
+    padding-left: 80px;
+    box-sizing: border-box;
+    width: 100%;
+    align-self: stretch;
+    column-gap: 30px;
+    line-height: 60px;
+
+}
+.down img{
+    height: 100vh;
+    width: 100vh;
+    /* padding-left: 50px;
+    padding-right: 100px; */
+}
+.down{
+    display: flex;
+    box-sizing: border-box;
+    flex: 7;
+}
+.for img{
+    height: 60px;
+    position: absolute;
+    bottom: 2900px;
+    transform: translateX(-50%);
+    padding-left: 250px;
+    padding-right: 50px;
+
+}
+.hour{
+    flex: 5;
+    padding-top: 60px;
+}
+.hour h1 span{
+    color: #FF7A00;
+}
+.hour h1{
+    font-size: 60px;
+    color: #211f1e;
+    padding-bottom: 40px;
+}
+.hour p{
+    font-size: 15px;
+    color: #383838;
+    padding-bottom: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    
+}
+.hour a{
+    border: 2px solid #FF7A00;
+    border-radius: 20px 20px 20px 0;
+    background-color: #FF7A00;
+    color: #FAFAF9;
+    border-width: 8px;
+    font-size: 20px;
+    font-weight: 200;
+}
+.was{
+    display: flex;
+    background-color: rgb(255, 249, 243);
+    align-items: center;
+}
+.you{
+    display: flex;
+    /* background-color: #111; */
+    color: #FAFAF9;
+    justify-content: space-between;
+    border-radius: 10px 10px 10px 10px;
+    height: 60px;
+    width: 80%;
+    padding: 10px;
+}
+.win{
+    display: flex;
+    flex-direction: column;
+    background-color: #111;
+    border-radius: 10px;
+    height: 40%;
+    color: #f5f5f5;
+    align-items: center;
+    line-height: 12px;
+    padding: 1rem;
+}
+.end{
+    display: flex;
+    flex-direction: column;
+    background-color: #111;
+    border-radius: 10px;
+    height: 40%;
+    color: #f5f5f5;
+    align-items: center;
+    line-height: 12px;
+    padding: 1rem;
+}
+.you p{
+    font-size: 8px;
+}
+.you h3{
+    font-size: 15px;
+}
+.low{
+    display: flex;
+    flex-direction: column;
+    padding-right: 60px;
+    align-items: center;
+    padding-top: 50px;
+}
+.save img{
+    height: 70vh;
+    width: 100vh;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.ram h2{
+    font-size: 40px;
+    color: rgb(68, 70, 72);
+}
+.ram h2 span{
+    color: #FF7A00;
+}
+.ram p{
+    color: rgb(68, 70, 72);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+}
+.right{
+    display: flex;
+    background-color: #001E89;
+    color: #FAFAF9;
+}
+.right img{
+    height: 100vh;
+    width: 100vh;
+    /* padding-left: 50px; */
+    padding-right: 100px; 
+    /* position: absolute;   */
+    left: 500px;
+    margin-top: 0;
+    padding-top: 0;
+           
+}
+.tie{
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-right: 50px;
+    padding-left: 80px;
+    line-height: 25px;
+    float: left;
+    
+}
+.tie h2{
+    font-size: 50px;
+}
+.tie h2 span{
+    color: #FF7A00;
+}
+.tie p{
+    font-size: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.tie a{
+    border: 2px solid #FF7A00;
+    border-radius: 20px 20px 20px 0;
+    background-color: #FF7A00;
+    color: #FAFAF9;
+    font-size: 15px;
+    align-items: center;
+    border-width: 10px;
+    padding-left: 20px;
+    width: 100px;
+    /* padding-right: 20px; */
+}
+.vest{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.union img{
+    height: 150vh;
+    width: 100vh;
+    /* padding-left: 100px; */
+    position: absolute;
+    left: 100px;
+    top: 1000px;
+    padding-top: 20px;
+    
+}
+.tin h2{
+    font-size: 50px;
+}
+.tin h2 span{
+    color: #FF7A00;
+}
+.tin{
+    padding-top: 100px;
+    color: rgb(33, 37, 41);
+    /* flex: 0 0 50rem; */
+    align-items: left;
+    padding-right: 100rem;
+    /* padding-left: 130rem; */
+    padding-bottom: 100px;
+}
+.tin p{
+    font-size: 15px;
+    font-weight: 300;
+    /* word-spacing: normal; */
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+.tin a{
+    border: 2px solid #FF7A00;
+    border-radius: 20px 20px 20px 0;
+    background-color: #FF7A00;
+    color: #FAFAF9;
+    height: 80%;
+    width: 80%;
+    border-width: 10px;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+}
+.moon{
+    display: flex;
+    background-color: #001E89;
+    color: #FAFAF9;
+    align-items: center;
+}
+.moon img{
+    height: 100vh;
+    width: 100vh;
+    padding-right: 80px;
+    /* position: absolute; */
+    left: 500px;
+}
+.can{
+    padding-left: 100px;
+}
+.can h2{
+    font-size: 40px;
+}
+.can h2 span{
+    color: #FF7A00;
+}
+.can p{
+    font-size: 20px;
+    padding-bottom: 50px;
+}
+.can a{
+    border: 2px solid #FF7A00;
+    border-radius: 20px 20px 20px 0;
+    background-color: #FF7A00;
+    color: #FAFAF9;
+    height: 100%;
+    width: 80%;
+    border-width: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.ten h3{
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 500px;
+}
+.ten h3 span{
+    color: #FF7A00;
+}
+.ten a{
+    display: none;
+}
+/* .ten :hover a{
+    display: block;
+} */
+.que{
+    display: flex;
+}
+.ten{
+    color: rgb(56, 56, 56);
+    justify-content: center;
+}
+.own{
+    font-size: 16px;
+    font-weight: 400;
+    justify-content: space-between;
+    line-height: 24px;
+    text-align: left;
+    box-sizing: border-box;
+    gap: 30px;
+}
+.ink{
+    /* background-color: #ffdab55d; */
+    flex: 0 0 35rem;
+    height: 300px;
+    align-items: center;
+    -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  border-radius: 20px 20px 20px 0;
+  transition: all 0.2s ease-in-out;
+  margin: 1rem;
+  box-sizing: border-box;
+  flex-basis: 350px;
+  margin: 10px 10px 10px 10px;
+  padding: 12px 12px 12px 12px;
+}
+.ink:hover{
+    background-color: #ffdab55d;
+    color:rgb(255, 122, 0);
+    transition: all 400ms ease-in-out;
+}
+.left:hover{
+    background-color: #ffdab55d;
+    color: rgb(255, 122, 0);
+    transition: all 400ms ease-in-out;
+}
+.ink:hover a{
+    display: block;
+}
+.left:hover a{
+    display: block;
+}
+.parrot:hover a{
+    display: block;
+}
+.keg:hover a{
+    display: block;
+}
+.gown:hover a{
+    display: block;
+}
+
+.parrot:hover{
+    background-color: #ffdab55d;
+    color: rgb(255, 122, 0);
+    transition: all 400ms ease-in-out;
+}
+.keg:hover{
+    background-color: #ffdab55d;
+    color: rgb(255, 122, 0);
+    transition: all 400ms ease-in-out;
+}
+.gown:hover{
+    background-color: #ffdab55d;
+    color: rgb(255, 122, 0);
+    transition: all 400ms ease-in-out;
+}
+.own a{
+    transition: all 0.2s ease-in-out;
+  background-color: #FF7A00;
+  padding: 1rem 3rem;
+  color: #FAFAF9;
+  border-radius: 20px 20px 20px 0;
+  text-decoration-color: rgb(250, 250, 249);
+  transition-behavior: normal;
+}
+.ink :hover a{
+    opacity: 1;
+}
+.left{
+    /* background-color: #ffdab55d; */
+    flex: 0 0 35rem;
+    height: 300px;
+    align-items: center;
+    -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  border-radius: 20px 20px 20px 0;
+  transition: all 0.2s ease-in-out;
+  margin: 1rem;
+  box-sizing: border-box;
+  flex-basis: 350px;
+  margin: 10px 10px 10px 10px;
+  padding: 12px 12px 12px 12px;
+}
+.parrot{
+    /* background-color: #ffdab55d; */
+    flex: 0 0 35rem;
+    height: 300px;
+    align-items: center;
+    -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  border-radius: 20px 20px 20px 0;
+  transition: all 0.2s ease-in-out;
+  margin: 1rem;
+  box-sizing: border-box;
+  flex-basis: 350px;
+  margin: 10px 10px 10px 10px;
+  padding: 12px 12px 12px 12px;
+}
+.keg{
+    /* background-color: #ffdab55d; */
+    flex: 0 0 35rem;
+    height: 300px;
+    align-items: center;
+    -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  border-radius: 20px 20px 20px 0;
+  transition: all 0.2s ease-in-out;
+  margin: 1rem;
+  box-sizing: border-box;
+  flex-basis: 350px;
+  margin: 10px;
+  padding: 12px;
+}
+.que{
+    display: flex;
+    justify-content: center;
+}
+.vest{
+    display: flex;
+    justify-content: center;
+}
+.gown{
+    /* background-color: #ffdab55d; */
+    flex: 0 0 35rem;
+    height: 300px;
+    align-items: center;
+    -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  border-radius: 20px 20px 20px 0;
+  transition: all 0.2s ease-in-out;
+  margin: 1rem;
+  box-sizing: border-box;
+  flex-basis: 350px;
+  margin: 10px 300px 10px 300px;
+  padding: 12px;flex-wrap: wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  
+}
+.leg{
+    display: flex;
+    color: #FAFAF9;
+    background-color: #001E89;
+    align-items: center;
+    padding: 40x;
+    font-size: 15px;
+}
+.room{
+    padding-right: 50px;
+    padding-left: 60px;
+    flex: 4;
+}
+.wash{
+    display: flex;
+    flex-direction: column;
+    flex: 4;
+}
+.form h3{
+    align-items: center;
+}
+.west{
+    display: flex;
+}
+.west img{
+    height: 20vh;
+    width: 18vh;
+}
+.item{
+    display: flex;
+}
+.high{
+    display: flex;
+}
+.high img{
+    height: 10vh;
+    width: 8vh;
+}
+.start{
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    flex: 4;
+}
+.woman{
+    display: flex;
+    gap: 10px;
+}
+.river{
+    background-color: #001048;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FAFAF9;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+</style>
+</head>
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="kolo-colored">
+                <img src="image/kolo-colored.svg">
+                <p>KoloMoni</p>
+            </div>
+            <div class="her">
+        <a href=".navbar-collapse"><img src="image/menu.png"></a>
+            </div> 
+        <div class="navbar-collapse">
+           <a href="">About us</a>
+           <a href="">Services</a>
+           <a href="">FAQs</a>
+           <button>Login</button>
+         </div>
+        </div>
+    </nav>
+</header>
+<body>
+  <div class="money">
+    <div class="hour">
+        <h1> WELCOME TO <span> KOLOMONI </span></h1>
+        <p>Be unstoppable with our automated secure savings and investment, bill payments, fund transfer, agency banking services and so much more.</p>
+        <a href="">Get Started</a>
+    </div>
+    <div class="down">
+        <div class="for">
+        <img src="image/mouse-line.svg">
+        </div>
+        <img src="image/header-img.png">
+    </div>
+  </div>
+  <div class="was">
+    <div class="save">
+        <img src="image/abt-us-illust.svg">
+    </div>
+    <div class="low">
+    <div class="ram">
+        <h2> About <span> Us </span></h2>
+        <p>What about an app that understands your financial needs and gives you everything! Kolomoni helps you achieve your goals conveniently and seamlessly. Enjoy a versatile array of impressive offerings that is fast, seamless and convenient anytime; savings and investments, bill payments and agency banking. Kolomoni gives you the power to do more.</p>
+    </div>
+    <div class="you">
+        <div class="win">
+            <img src="">
+            <p>Download on the</p>
+            <h3>App Store</h3>
+        </div>
+        <div class="end">
+            <img src="">
+            <p>GET IT ON </p>
+            <h3>Google Play</h3>
+        </div>
+    </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="tie">
+        <h2>  Kolomoni <span> Savings </span></h2>
+        <p>Some of the best things in life are automated, just like our Kolomoni Savings. We offer flexible savings at competitive interest rates, so you have one less thing to worry about as you conveniently grow your funds.</p>
+        <a href="">Learn more</a>
+    </div>
+    <img src="image/savings-mascot.png">
+  </div>
+  <div class="vest">
+    <div class="tin">
+        <h2> Agency <span> Banking </span></h2>
+        <p>We are building the largest branchless banking ecosystem for seamless access to financial services everywhere. Join us.</p>
+        <a href="">Learn more</a>
+    </div>
+    <div class="union">
+        <img src="image/pos-terminal.png">
+    </div>
+  </div>
+  <div class="moon">
+    <div class="can">
+      <h2>KoloMoni <span> investment</span></h2>
+      <p>Let’s grow your wealth with our unique proprietary investment options that turn your financial dreams to reality.</p>
+      <a href="">Learn more</a>
+    </div>
+    <img src="image/invest-mascot.png">
+  </div>
+  <div class="ten">
+    <h3>Why <span> Us?</span></h3>
+    <div class="own">
+      <div class="que">
+        <div class="ink">
+          <h2>100% web security</h2>
+          <p>Kolomoni is built with the highest level of security standards. All data are encrypted before transmission using a secured layer for establishing an encrypted connection.</p>
+          <a href="">Learn more...</a>
+        </div>
+        <div class="left">
+          <h2>card security</h2>
+          <p>We work with a PCI-DSS compliant payment processor for the protection and security of card details.</p>
+          <a href="">Learn more...</a>
+        </div>
+      </div>
+      <div class="vest">
+        <div class="parrot">
+          <h2>Fund Security</h2>
+          <p>All funds are trusted with a Public Trustee, duly registered with the Nigerian Securities and Exchange Commission (SEC).</p>
+          <a href="">Learn more..</a>
+        </div>
+        <div class="keg">
+          <h2>Best Rates</h2>
+          <p>Our rates and charges are very impressive. We offer up to 15 % interest per annum on savings and investments.</p>
+          <a href="">Learn more...</a>
+        </div>
+      </div>
+      <div class="man">
+        <div class="gown">
+          <h2>Something For Everyone</h2>
+          <p>Our offerings are as versatile as you, giving you the freedom and convenience to do so much.</p>
+          <a href="">Learn more...</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="leg">
+    <div class="room">
+      <p>Kolomoni is a product of CapitalSage Technology Limited (formerly CreditAssist Assist Investment Limited). Registered under the Corporate Affairs Commission (CAC) with RC: 1507157.<br> <br>
+        All funds on Kolomoni are insured by the Nigeria Deposit Insurance Corporation (NDIC)</p>
+    </div>
+    <div class="wash">
+    <div class="form">
+      <h3>CONTACT US</h3>
+    </div>
+    <div class="tree">
+      <div class="west">
+        <img src="image/home.svg">
+        <p>1, Ademiluyi Close, By Methodist Church, New Bodija, Ibadan (Headquarters) </p>
+      </div>
+      <div class="item">
+        <img src="image/phone.svg">
+        <p>08104386082</p>
+      </div>
+    </div>
+    <div class="high">
+      <img src="image/mail.svg">
+      <p>support@kolomoni.ng</p>
+    </div>
+  </div>
+  <div class="start">
+    <h3>SOCIALS</h3>
+    <div class="woman">
+      <img src="image/Group 191.svg">
+      <img src="image/Group 190.svg">
+      <img src="image/Group 189.svg">
+    </div>
+  </div>
+  </div>
+  <div class="river">
+    <p>© 2025 Cight Kolomoni. All Rights Reserved </p>
+  </div>
+</body>
+</html>
+   

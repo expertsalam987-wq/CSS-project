@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create element in js</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button type="button" id="submit">Submit</button>
+    <div id="parent">
+    </div>
+
+</body>
+    <script>
+   const input = document.getElementById("input");
+      const button = document.getElementById("submit");
+      button.addEventListener("click",function(){
+        const inputvalue = input.value;
+        if(inputvalue === ""){
+            alert("This filled is required");
+            return;
+        }
+        const tasklist = document.createElement("p");
+        tasklist.textContent = inputvalue;
+        document.getElementById("parent").appendChild(tasklist);
+        inputvalue.value="";
+    });
+    </script>
+</html>
